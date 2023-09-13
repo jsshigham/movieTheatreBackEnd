@@ -27,7 +27,7 @@ app.get('/api', (request, response) => {
 
 
 mongoose
-    .connect(process.env.MONGODB_URI)
+    .connect(process.env.MONGO_DB_URL)
     .then(() => {
         console.log('app is connected to the database');
         app.listen(PORT, () => {
