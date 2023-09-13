@@ -43,3 +43,4 @@ mongoose
         console.log(error)
     });
 
+    export default app;
