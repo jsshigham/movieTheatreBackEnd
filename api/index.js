@@ -1,11 +1,10 @@
-const express = require("express");
-const dotenv = require('dotenv');
-dotenv.config();
-// import mongoose from "mongoose";
-// import movieRoute from "./routes/movieRoute.js"
-const cors = require("cors")  
-const app = express()
+import express from 'express';
 
+import mongoose from 'mongoose';
+import movieRoute from './routes/movieRoute.js';
+import cors from 'cors';
+
+const app = express();
 
 
 app.use(express.json());
@@ -18,7 +17,7 @@ app.use(cors());
 //      allowedHeaders: ["Content-Type"]
 // }))
 
-// app.use("/movies", movieRoute)
+app.use("/api/movies", movieRoute)
 
 
 const PORT = process.env.PORT
@@ -31,16 +30,16 @@ app.get('/api', (request, response) => {
 
 
 
-// // mongoose
-//     // .connect(process.env.MONGO_DB_URL)
-//     .then(() => {
-//         console.log('app is connected to the database');
+mongoose
+    .connect(process.env.MONGO_DB_URL)
+    .then(() => {
+        console.log('app is connected to the database');
         app.listen(PORT, () => {
             console.log(`we are listening on port ${PORT}`) 
         })
-//     })
-//     .catch((error) => {
-//         console.log(error)
-//     });
+    })
+    .catch((error) => {
+        console.log(error)
+    });
 
-module.exports = app;
+export default app;
