@@ -1,8 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv')
 dotenv.config()
-// const mongoose = require('mongoose');
-const movieRoute = require('./routes/movieRoute.js');
+const mongoose = require('mongoose');
+const movieRoute = require('./routes/movieRoute');
 const cors = require('cors');
 
 const app = express();
@@ -32,18 +32,18 @@ app.get('/api', (request, response) => {
 
 
 
-// mongoose
-//     .connect(process.env.MONGO_DB_URL)
-//     .then(() => {
-//         console.log('app is connected to the database');
-//         app.listen(PORT, () => {
-//             console.log(`we are listening on port ${PORT}`) 
-//         })
-//     })
-//     .catch((error) => {
-//         console.log(error)
-//     });
+mongoose
+    .connect(process.env.MONGO_DB_URL)
+    .then(() => {
+        console.log('app is connected to the database');
+        app.listen(PORT, () => {
+            console.log(`we are listening on port ${PORT}`) 
+        })
+    })
+    .catch((error) => {
+        console.log(error)
+    });
 
-app.listen(PORT)
+
 
 module.exports = app;
