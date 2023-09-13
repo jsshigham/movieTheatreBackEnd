@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors())
+app.use(cors());
 
 // app.use(cors({
 //      origin: "https://movie-theater-front-end.vercel.app",
@@ -25,7 +25,7 @@ const PORT = process.env.PORT
 
 app.get('/', (request, response) => {
     console.log(request)
-    return response.status(200).send('it works')
+    return response.status(200).send('it works now')
 } )
 
 
