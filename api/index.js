@@ -18,7 +18,7 @@ app.use(cors());
 //      allowedHeaders: ["Content-Type"]
 // }))
 
-app.use("/api/movies", movieRoute)
+// app.use("/api/movies", movieRoute)
 
 
 const PORT = process.env.PORT
