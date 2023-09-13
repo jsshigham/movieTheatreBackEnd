@@ -140,20 +140,20 @@ app.get('/api', (request, response) => {
     return response.status(200).send('it works')
 } )
 
+app.listen(PORT)
 
 
-
-mongoose
-    .connect(process.env.MONGO_DB_URL)
-    .then(() => {
-        console.log('app is connected to the database');
-        app.listen(PORT, () => {
-            console.log(`we are listening on port ${PORT}`) 
-        })
-    })
-    .catch((error) => {
-        console.log(error)
-    });
+// mongoose
+//     .connect(process.env.MONGO_DB_URL)
+//     .then(() => {
+//         console.log('app is connected to the database');
+//         app.listen(PORT, () => {
+//             console.log(`we are listening on port ${PORT}`) 
+//         })
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     });
 
 
 
