@@ -18,29 +18,29 @@ app.use(cors());
 //      allowedHeaders: ["Content-Type"]
 // }))
 
-app.use("/movies", movieRoute)
+// app.use("/movies", movieRoute)
 
 
 const PORT = process.env.PORT
 
 app.get('/', (request, response) => {
     console.log(request)
-    return response.status(200).send('it works now I think')
+    return response.status(200).send('it works')
 } )
 
 
 
 
-mongoose
-    .connect(process.env.MONGO_DB_URL)
-    .then(() => {
-        console.log('app is connected to the database');
+// // mongoose
+//     // .connect(process.env.MONGO_DB_URL)
+//     .then(() => {
+//         console.log('app is connected to the database');
         app.listen(PORT, () => {
             console.log(`we are listening on port ${PORT}`) 
         })
-    })
-    .catch((error) => {
-        console.log(error)
-    });
+//     })
+//     .catch((error) => {
+//         console.log(error)
+//     });
 
     export default app;
