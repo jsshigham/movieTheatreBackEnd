@@ -1,10 +1,10 @@
-const app = require("express")();
+const express = require("express");
 const dotenv = require('dotenv');
 dotenv.config();
 // import mongoose from "mongoose";
 // import movieRoute from "./routes/movieRoute.js"
 const cors = require("cors")  
-
+const app = express()
 
 
 
