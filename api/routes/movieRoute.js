@@ -1,5 +1,5 @@
-import express from 'express';
-import { Movie } from '../models/movieModel.js';
+const express = require('express');
+const Movie = require('../models/movieModel.js');
 
 const router = express.Router();
 
@@ -113,4 +113,4 @@ router.delete("/:id", async (request, response) => {
     response.status(500).send({ message: error.message });
   }
 });
-export default router;
+module.exports = router;

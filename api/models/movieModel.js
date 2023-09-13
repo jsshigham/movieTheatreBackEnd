@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const movieSchema = mongoose.Schema(
   {
@@ -44,4 +44,6 @@ const movieSchema = mongoose.Schema(
   }
 );
 
-export const Movie = mongoose.model("movie", movieSchema);
+const Movie = mongoose.model("movie", movieSchema);
+
+module.exports = Movie

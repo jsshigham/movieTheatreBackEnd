@@ -1,10 +1,11 @@
-import express from 'express';
-
-import mongoose from 'mongoose';
-import movieRoute from './routes/movieRoute.js';
-import cors from 'cors';
+const express = require('express');
+const dotenv = require('dotenv')
+const mongoose = require('mongoose');
+const movieRoute = require('./routes/movieRoute.js');
+const cors = require('cors');
 
 const app = express();
+dotenv.config()
 
 
 app.use(express.json());
@@ -42,4 +43,4 @@ mongoose
         console.log(error)
     });
 
-export default app;
+module.exports = app;
