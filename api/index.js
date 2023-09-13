@@ -23,7 +23,7 @@ app.use(cors());
 
 const PORT = process.env.PORT
 
-app.get('/', (request, response) => {
+app.get('/api', (request, response) => {
     console.log(request)
     return response.status(200).send('it works')
 } )
