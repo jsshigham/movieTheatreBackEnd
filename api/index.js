@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv')
 dotenv.config()
 const mongoose = require('mongoose');
-const movieRoute = require('./routes/movieRoute');
+const movieRoute = require('./routes/movieRoute.js');
 const cors = require('cors');
 
 const app = express();
@@ -19,7 +19,7 @@ app.use(cors());
 //      allowedHeaders: ["Content-Type"]
 // }))
 
-app.use("/api/movies", movieRoute)
+app.use("/movies", movieRoute)
 
 
 const PORT = process.env.PORT
