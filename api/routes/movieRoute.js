@@ -30,7 +30,7 @@ router.post("/", async (request, response) => {
 
     const movie = await Movie.create(newMovie);
 
-    response.status(201).send(movie);
+    response.status(200).send(movie); 
   } catch (error) {
     console.log(error.message);
     response.status(500).send({ message: error.message });
