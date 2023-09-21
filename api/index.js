@@ -10,13 +10,13 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors());
+// app.use(cors());
 
-// app.use(cors({
-//      origin: "https://movie-theater-front-end.vercel.app",
-//      methods: ["PUT", "POST", "GET", "DELETE"],
-//      allowedHeaders: ["Content-Type"]
-// }))
+app.use(cors({
+     origin: "https://movie-theater-front-end.vercel.app",
+     methods: ["PUT", "POST", "GET", "DELETE"],
+     allowedHeaders: ["Content-Type"]
+}))
 
 app.use("/movies", movieRoute)
 
