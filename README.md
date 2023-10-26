@@ -7,7 +7,7 @@
 
 ## YouTube Demo link
 
-- [smallTownMovieTheater YouTube Demo](https://youtu.be/5k6uRAkmS6c)
+- [smallTownMovieTheater YouTube](https://youtu.be/5k6uRAkmS6c)
 
 ## Project link
 
